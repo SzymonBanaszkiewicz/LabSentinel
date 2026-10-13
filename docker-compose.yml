@@ -1,0 +1,7 @@
+services:
+  core:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: labsentinel-core
+    restart: unless-stopped
