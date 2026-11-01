@@ -1,4 +1,3 @@
-
 import pytest
 
 from services.core.state_machine import StateMachine, SystemState

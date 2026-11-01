@@ -10,16 +10,14 @@ class PIRSensor:
         self.failure_probability = failure_probability
         self.disturbance_probability = disturbance_probability
 
-    def _read_sensor(
-        self
-    ) -> bool | None:
+    def _read_sensor(self) -> bool | None:
         # Symulacja awarii czujnika
         if random.random() < self.failure_probability:
             return None
 
         # Symulacja nietypowego zdarzenia
         if random.random() < self.disturbance_probability:
-            return True;
+            return True
 
         # Zwykły pomiar
         presence: bool = False
